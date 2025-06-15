@@ -32,7 +32,7 @@ export default function Navbar() {
         transition={{ delay: 0.5 }}
         className="hidden md:flex space-x-8 text-sm md:text-base font-medium text-white bg-transparent"
       >
-        {['Home', 'About', 'Projects' , 'Skills',  'Contact'].map((item, index) => (
+        {['Home', 'About', 'Projects' , 'Skills',  'Contact'].map((item) => (
           <motion.li
             key={item}
             whileHover={{ scale: 1.05 }}
