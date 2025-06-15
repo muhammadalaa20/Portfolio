@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.0//EN'  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg enable-background="new 0 0 100 100" height="100px" id="Layer_1" version="1.0" viewBox="0 0 100 100" width="100px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <!-- Black circular background -->
+  <circle cx="50" cy="50" r="48" fill="black" />
+
+  <!-- Original white path on top -->
+  <path fill="white" d="M63.333,10L46.191,44.285L36.667,30L10,23.333v60L36.667,90V63.333L90,76.666v-60L63.333,10z M30,81.461l-13.333-3.333  V31.872L30,35.205V81.461z M36.667,56.461V42.018l11.556,17.331L36.667,56.461z M59.075,63.613l-8.626-12.938l16.455-32.912  l13.415,3.353L59.075,63.613z M83.333,68.128L66.387,63.89L83.333,30V68.128z"/>
+</svg>
