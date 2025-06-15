@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { FaNetworkWired, FaServer, FaReact, FaNodeJs, FaPython } from "react-icons/fa";
+import { FaServer, FaReact, FaNodeJs, FaPython } from "react-icons/fa";
 import { SiNextdotjs, SiJavascript } from "react-icons/si";
 
 const heading = "About Me".split(" ");
@@ -32,7 +32,7 @@ export default function AboutHero() {
           transition={{ delay: 0.8, duration: 1 }}
           className="text-base md:text-lg text-gray-300 leading-relaxed md:leading-loose"
         >
-          I'm <span className="font-semibold text-white">Muhammad Alaa Mostafa Khalil</span>, a 26-year-old Egyptian Electronics and Communications Engineer from Alexandria, currently working as a{" "}
+          I&apos;m <span className="font-semibold text-white">Muhammad Alaa Mostafa Khalil</span>, a 26-year-old Egyptian Electronics and Communications Engineer from Alexandria, currently working as a{" "}
           <span className="text-pink-400 inline-flex items-center gap-1">
             <FaServer className="inline-block" /> Network & System Administrator
           </span>{" "}
