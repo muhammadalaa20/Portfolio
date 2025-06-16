@@ -6,6 +6,21 @@ import Navbar from "../../components/Navbar";
 import Link from "next/link";
 
 const projects = [
+    {
+    title: "Chatty AI Assistant",
+    description:
+      "An intelligent AI-powered chatbot using Gemini AI and a clean frontend.",
+    tech: [
+      "Python",
+      "Gemini AI Studio",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Tailwind CSS",
+    ],
+    demo: "https://muhammadalaa84.pythonanywhere.com/",
+    github: "https://github.com/muhammadalaa20/Chatty",
+  },
   {
     title: "Smart Notes App",
     description:
@@ -20,41 +35,21 @@ const projects = [
       "useContext",
       "Framer Motion",
     ],
-    link: "/projects/notes-app",
-    demo: "https://smartnotes.example.com",
-    github: "https://github.com/yourusername/smart-notes-app",
+    github: "https://github.com/muhammadalaa20/DailyReports",
   },
   {
     title: "vSphere Monitor Desktop App",
     description:
       "Electron-based tool that allows real-time monitoring of vSphere metrics from a desktop app.",
-    tech: ["Python", "Electron.js"],
-    link: "/projects/vsphere-monitor",
-    github: "https://github.com/yourusername/vsphere-monitor",
+    tech: ["Python", "Electron.js", "HTML", "CSS", "JavaScript", "Tailwind CSS"],
+    github: "https://github.com/muhammadalaa20/Vsphere-Monitor",
   },
   {
     title: "Booking Platform",
     description:
       "A full-stack booking platform with modern UI/UX and CMS integration.",
-    tech: ["Next.js", "Tailwind CSS", "shadcn/ui", "Framer Motion", "Strapi"],
-    link: "/projects/booking-platform",
-    demo: "https://booking.example.com",
-    github: "https://github.com/yourusername/booking-platform",
-  },
-  {
-    title: "Chatty AI Assistant",
-    description:
-      "An intelligent AI-powered chatbot using Gemini AI and a clean frontend.",
-    tech: [
-      "Python",
-      "Gemini AI Studio",
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "Tailwind CSS",
-    ],
-    link: "/projects/chatty",
-    github: "https://github.com/yourusername/chatty-ai",
+    tech: ["Next.js", "Tailwind CSS", "shadcn/ui", "Framer Motion", "Strapi", "CSS", "JavaScript"],
+    github: "https://github.com/muhammadalaa20/booking-website",
   },
 ];
 
