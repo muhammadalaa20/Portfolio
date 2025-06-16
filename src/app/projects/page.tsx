@@ -84,26 +84,6 @@ export default function ProjectsPage() {
         animate={{ x: [0, 50, -50, 0], y: [0, -60, 60, 0] }}
         transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
       />
-      <motion.div
-        className="absolute bottom-[-150%] left-[-10%] w-[400px] h-[400px] bg-[#7F1DFF] rounded-full filter blur-3xl opacity-30"
-        animate={{ x: [0, 150, -100, 0], y: [0, -100, 100, 0] }}
-        transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-      />
-      <motion.div
-        className="absolute bottom-[-80%] right-[10%] w-[400px] h-[400px] bg-[#FF0088] rounded-full filter blur-3xl opacity-30"
-        animate={{ x: [0, -150, 100, 0], y: [0, 100, -100, 0] }}
-        transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-      />
-      <motion.div
-        className="absolute bottom-[-150%] right-[10%] w-[300px] h-[300px] bg-[#00ffff] rounded-full filter blur-3xl opacity-20"
-        animate={{ x: [0, 50, -50, 0], y: [0, -60, 60, 0] }}
-        transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-      />
-      <motion.div
-        className="absolute bottom-[-60%] left-[10%] w-[300px] h-[300px] bg-[#e5f049] rounded-full filter blur-3xl opacity-20"
-        animate={{ x: [0, 50, -50, 0], y: [0, -60, 60, 0] }}
-        transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-      />
       {/* Navigation */}
       <div className=" z-20">
         <Navbar />
