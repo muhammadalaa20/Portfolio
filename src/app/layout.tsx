@@ -5,6 +5,7 @@ import "./globals.css";
 import ScrollLinked from "@/components/ScrollLinked";
 import { AnimatePresence, motion } from "framer-motion";
 import { usePathname } from "next/navigation";
+import { Toaster } from "react-hot-toast";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -46,6 +47,7 @@ export default function RootLayout({
             transition={{ duration: 0.5 }}
           >
             {children}
+          <Toaster position="top-right" reverseOrder={false} />
           </motion.div>
         </AnimatePresence>
         <ScrollLinked />
