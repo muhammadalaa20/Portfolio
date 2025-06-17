@@ -44,7 +44,7 @@ export default function ContactSection() {
       <Navbar />
       <section
         id="contact"
-        className="relative min-h-screen py-24 px-6 flex flex-col items-center justify-center bg-[#0d0d0d] text-white overflow-hidden"
+        className="relative min-h-screen pt-40 pb-16 px-6 flex flex-col items-center justify-center bg-[#0d0d0d] text-white overflow-hidden"
       >
         {/* Animated Background Blobs */}
         <motion.div
@@ -68,34 +68,88 @@ export default function ContactSection() {
           transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
         />
 
-        {/* Section Header */}
-        <motion.h2
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-4xl md:text-5xl font-extrabold text-center mb-4 bg-gradient-to-r from-[#7F1DFF] via-[#FF0088] to-[#00FFFF] text-transparent bg-clip-text z-10"
-        >
-          Let&apos;s Connect
-        </motion.h2>
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2, duration: 0.8 }}
-          className="text-gray-400 text-center max-w-2xl mb-16 z-10"
-        >
-          Have a project, idea, or opportunity you’d like to discuss? Drop me a
-          message and I’ll get back to you shortly.
-        </motion.p>
+        {/* Main Grid with Header, Info, and Form */}
+        <div className="flex flex-col md:flex-row gap-16 max-w-6xl w-full z-10">
+          {/* Left Side: Header + Contact Info + Socials */}
+          <div className="flex-1 flex flex-col justify-center space-y-10">
+            <motion.h2
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-5xl md:text-6xl font-bold tracking-tight bg-gradient-to-r from-[#7F1DFF] via-[#FF0088] to-[#00FFFF] text-transparent bg-clip-text"
+            >
+              Let&apos;s Connect
+            </motion.h2>
+            <motion.p
+              className="text-lg text-gray-400 mt-4 leading-relaxed"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2, duration: 0.8 }}
+            >
+              Have a project or an idea? Reach out and let&apos;s build something
+              amazing.
+            </motion.p>
 
-        {/* Main Grid */}
-        <div className="flex flex-col md:flex-row-reverse gap-12 max-w-6xl w-full z-10">
-          {/* Contact Form (Right Side on md+) */}
+            {/* Contact Info */}
+            <div className="space-y-8">
+              {/* Contact Details */}
+              <div className="space-y-5 border-l-4 border-[#7F1DFF] pl-6">
+                <div className="flex items-center space-x-4 text-gray-300">
+                  <Mail className="text-[#7F1DFF]" size={22} />
+                  <span className="text-base">muhammadalaa84@gmail.com</span>
+                </div>
+                <div className="flex items-center space-x-4 text-gray-300">
+                  <Phone className="text-[#7F1DFF]" size={22} />
+                  <span className="text-base">+20 102 418 3247</span>
+                </div>
+                <div className="flex items-center space-x-4 text-gray-300">
+                  <MapPin className="text-[#7F1DFF]" size={22} />
+                  <span className="text-base">Alexandria, Egypt</span>
+                </div>
+              </div>
+
+              {/* Social Media Icons */}
+              <div className="flex items-center gap-4 pt-4 border-t border-gray-700">
+                <Link
+                  href="https://github.com/muhammadalaa20"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Github
+                    className="text-gray-400 hover:text-white transition"
+                    size={28}
+                  />
+                </Link>
+                <Link
+                  href="https://linkedin.com/in/muhammadalaa84"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Linkedin
+                    className="text-blue-500 hover:text-white transition"
+                    size={28}
+                  />
+                </Link>
+                <Link
+                  href="https://twitter.com/muhammadalaa20"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Twitter
+                    className="text-sky-400 hover:text-white transition"
+                    size={28}
+                  />
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Side: Contact Form */}
           <form
             ref={form}
             onSubmit={sendEmail}
             className="flex-1 space-y-6 bg-gray-900 bg-opacity-60 p-10 rounded-2xl shadow-xl backdrop-blur-md"
           >
-            {/* Name Field */}
             <div className="flex flex-col space-y-2">
               <label
                 htmlFor="user_name"
@@ -113,7 +167,6 @@ export default function ContactSection() {
               />
             </div>
 
-            {/* Email Field */}
             <div className="flex flex-col space-y-2">
               <label
                 htmlFor="user_email"
@@ -131,7 +184,6 @@ export default function ContactSection() {
               />
             </div>
 
-            {/* Message Field */}
             <div className="flex flex-col space-y-2">
               <label
                 htmlFor="message"
@@ -149,68 +201,24 @@ export default function ContactSection() {
               ></textarea>
             </div>
 
-            {/* Submit Button */}
             <button
               type="submit"
               disabled={loading}
-              className="w-full py-3 px-6 font-semibold bg-gradient-to-r from-[#7F1DFF] to-[#9c3bff] rounded-full text-white hover:opacity-90 hover:shadow-lg transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full py-3 px-6 font-semibold bg-gradient-to-r from-[#7F1DFF] to-[#9c3bff] bg-[#7F1DFF] text-white rounded-3xl shadow-xl transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-[0_0_25px_#9c3bff] hover:bg-[#9c3bff]"
             >
               {loading ? "Sending..." : "Send Message"}
             </button>
           </form>
-
-          {/* Contact Info + Socials (Left Side on md+) */}
-          <div className="flex-1 space-y-6 self-center">
-            <div className="space-y-4">
-              <div className="flex items-center gap-4 text-gray-300">
-                <Mail className="text-[#7F1DFF]" />
-                <span>muhammadalaa84@gmail.com</span>
-              </div>
-              <div className="flex items-center gap-4 text-gray-300">
-                <Phone className="text-[#7F1DFF]" />
-                <span>+20 102 418 3247</span>
-              </div>
-              <div className="flex items-center gap-4 text-gray-300">
-                <MapPin className="text-[#7F1DFF]" />
-                <span>Alexandria, Egypt</span>
-              </div>
-            </div>
-
-            {/* Social Links */}
-            <div className="flex items-center gap-6 pt-6">
-              <Link
-                href="https://github.com/muhammadalaa20"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Github
-                  className="text-gray-300 hover:text-white transition"
-                  size={28}
-                />
-              </Link>
-              <Link
-                href="https://linkedin.com/in/muhammadalaa84"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Linkedin
-                  className="text-blue-500 hover:text-white transition"
-                  size={28}
-                />
-              </Link>
-              <Link
-                href="https://twitter.com/muhammadalaa20"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Twitter
-                  className="text-sky-400 hover:text-white transition"
-                  size={28}
-                />
-              </Link>
-            </div>
-          </div>
         </div>
+        {/* 📅 Footer with Animated Year */}
+        <motion.footer
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          className="absolute bottom-4 w-full text-center text-sm text-gray-500"
+        >
+          &copy; 2025 Muhammad Alaa — All rights reserved.
+        </motion.footer>
       </section>
     </>
   );
