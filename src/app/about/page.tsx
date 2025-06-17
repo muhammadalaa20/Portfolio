@@ -4,50 +4,82 @@ import { motion } from "framer-motion";
 import ScrollLinked from "../../components/ScrollLinked";
 import Navbar from "../../components/Navbar";
 import AboutHero from "@/components/aboutHero";
-export default function About() {
+import {
+  Cpu,
+  BookOpen,
+  Code,
+  ShieldCheck,
+  Brain,
+  Server,
+  Layers3,
+  MoveRight,
+  Activity,
+  BadgeCheck,
+} from "lucide-react";
 
-    const journey = [
-  {
-    year: "2016",
-    label: "Began my engineering journey at Alexandria University, fueled by a passion for electronics and a curiosity for how computers work. Discovered Python and the endless possibilities it brings."
-  },
-  {
-    year: "2017",
-    label: "Earned top grades and proudly chose Electrical Engineering as my major. Took my first steps into low-level programming by mastering C, laying the foundation for logical problem-solving."
-  },
-  {
-    year: "2018",
-    label: "Specialized in Communications & Electronics. While diving into signal theory and circuit design, I was also teaching myself the ins and outs of AVR microcontrollers and embedded systems."
-  },
-  {
-    year: "2019",
-    label: "Paused to reflect and explore the professional world—this break opened my eyes to broader career possibilities and sparked my interest in IT systems and infrastructure."
-  },
-  {
-    year: "2020",
-    label: "Invested in personal growth—improved my English and soft skills to better communicate ideas and work within global teams. This year became a turning point for long-term career planning."
-  },
-  {
-    year: "2021",
-    label: "Ventured into machine learning and AI. Worked on a graduation project focused on intelligent load balancing in cellular networks using reinforcement learning."
-  },
-  {
-    year: "2022",
-    label: "Jumped head-first into the world of web development. Studied modern frameworks like React through FWD, YouTube, Coursera, and Udemy—building real-world projects along the way."
-  },
-  {
-    year: "2023",
-    label: "Served in the military while refusing to pause my passion—dedicated my spare time to sharpening my development skills and staying aligned with industry trends."
-  },
-  {
-    year: "2024",
-    label: "Started a new chapter at Alexandria Container and Cargo Handling Company as a Network & System Administrator. Now actively blending my dev and sysadmin expertise in real-world environments."
-  },
-  {
-    year: "2025",
-    label: "Today, I'm crafting seamless, scalable digital systems that connect infrastructure with intelligent frontend experiences. The mission: deliver high-impact, reliable solutions through code and command line."
-  }
-];
+export default function About() {
+  const journey = [
+    {
+      year: "2016",
+      label:
+        "Began my engineering journey at Alexandria University, fueled by a passion for electronics and a curiosity for how computers work. Discovered Python and the endless possibilities it brings.",
+      icon: BookOpen,
+    },
+    {
+      year: "2017",
+      label:
+        "Earned top grades and proudly chose Electrical Engineering as my major. Took my first steps into low-level programming by mastering C, laying the foundation for logical problem-solving.",
+      icon: Cpu,
+    },
+    {
+      year: "2018",
+      label:
+        "Specialized in Communications & Electronics. While diving into signal theory and circuit design, I was also teaching myself the ins and outs of AVR microcontrollers and embedded systems.",
+      icon: ShieldCheck,
+    },
+    {
+      year: "2019",
+      label:
+        "Paused to reflect and explore the professional world—this break opened my eyes to broader career possibilities and sparked my interest in IT systems and infrastructure.",
+      icon: Code,
+    },
+    {
+      year: "2020",
+      label:
+        "Invested in personal growth—improved my English and soft skills to better communicate ideas and work within global teams. This year became a turning point for long-term career planning.",
+      icon: Brain,
+    },
+    {
+      year: "2021",
+      label:
+        "Ventured into machine learning and AI. Worked on a graduation project focused on intelligent load balancing in cellular networks using reinforcement learning.",
+      icon: Layers3,
+    },
+    {
+      year: "2022",
+      label:
+        "Jumped head-first into the world of web development. Studied modern frameworks like React through FWD, YouTube, Coursera, and Udemy—building real-world projects along the way.",
+      icon: MoveRight,
+    },
+    {
+      year: "2023",
+      label:
+        "Served in the military while refusing to pause my passion—dedicated my spare time to sharpening my development skills and staying aligned with industry trends.",
+      icon: Activity,
+    },
+    {
+      year: "2024",
+      label:
+        "Started a new chapter at Alexandria Container and Cargo Handling Company as a Network & System Administrator. Now actively blending my dev and sysadmin expertise in real-world environments.",
+      icon: Server,
+    },
+    {
+      year: "2025",
+      label:
+        "Today, I'm crafting seamless, scalable digital systems that connect infrastructure with intelligent frontend experiences. The mission: deliver high-impact, reliable solutions through code and command line.",
+      icon: BadgeCheck,
+    },
+  ];
 
   return (
     <div className="relative min-h-screen w-full overflow-hidden bg-[#0d0d0d] text-white">
@@ -82,46 +114,61 @@ export default function About() {
 
       {/* Hero Section (Full Height Text Only) */}
 
-        <AboutHero />
+      <AboutHero />
 
       {/* Journey Map */}
       <section className="relative z-10 py-20 px-6 md:px-10 flex justify-center">
         <div className="flex flex-col items-center">
           <h2 className="text-3xl font-bold mb-16 text-center">My Journey</h2>
-          {journey.map((item, i) => (
-            <div key={i} className="flex flex-col items-center">
-              {/* Year */}
-              <motion.span
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: i * 0.1 }}
-                viewport={{ once: true }}
-                className="text-purple-300 font-semibold text-lg"
-              >
-                {item.year}
-              </motion.span>
+          {journey.map((item, i) => {
+            const Icon = item.icon;
+            return (
+              <div key={i} className="flex flex-col items-center">
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.6, delay: i * 0.05 }}
+                  viewport={{ once: true }}
+                  className="mt-2"
+                >
+                  <Icon className="text-purple-400 size-10 md:size-12" />
+                </motion.div>
 
-              {/* Info */}
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: i * 0.15, ease: "easeOut" }}
-                viewport={{ once: true }}
-                className="text-gray-300 text-[16px] leading-relaxed text-center max-w-xl mx-auto mt-4 mb-8 px-4 md:text-lg"
-               >
+                <motion.span
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: i * 0.1 }}
+                  viewport={{ once: true }}
+                  className="text-purple-300 font-semibold text-lg"
+                >
+                  {item.year}
+                </motion.span>
+
+                <motion.p
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{
+                    duration: 0.6,
+                    delay: i * 0.15,
+                    ease: "easeOut",
+                  }}
+                  viewport={{ once: true }}
+                  className="text-gray-300 text-[16px] leading-relaxed text-center max-w-xl mx-auto mt-4 mb-8 px-4 md:text-lg"
+                >
                   {item.label}
-              </motion.p>
+                </motion.p>
 
-              {/* Dotted Line (except after the last item) */}
-              {i !== journey.length - 1 && (
-                <div className="h-12 border-l-2 border-dotted border-purple-400" />
-              )}
-            </div>
-          ))}
+                {/* Dotted Line (except after the last item) */}
+                {i !== journey.length - 1 && (
+                  <div className="h-12 border-l-2 border-dotted border-purple-400" />
+                )}
+              </div>
+            );
+          })}
         </div>
       </section>
 
-          {/* 📅 Footer with Animated Year */}
+      {/* 📅 Footer with Animated Year */}
       <motion.footer
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
