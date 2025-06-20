@@ -55,7 +55,7 @@ const projects = [
 
 export default function ProjectsPage() {
   return (
-    <div className="min-h-screen bg-[#0d0d0d] text-white pt-16 overflow-hidden relative">
+    <div className="min-h-screen bg-[#0d0d0d] text-white pt-8 overflow-hidden relative">
       <ScrollLinked />
 
       {/* Animated Background Blobs */}
@@ -125,7 +125,7 @@ export default function ProjectsPage() {
       </section>
       <div
         id="projects-section"
-        className="min-h-screen flex flex-col items-center justify-center text-center relative z-10 space-y-6 py-28 px-6"
+        className="min-h-screen flex flex-col items-center justify-center text-center relative z-10 space-y-6 py-10 px-6"
       >
         <div className="grid gap-12 max-w-5xl mx-auto">
           {projects.map((project, i) => (
