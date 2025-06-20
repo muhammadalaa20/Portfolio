@@ -50,7 +50,7 @@ const skills = {
       level: "Advanced",
     },
     {
-      name: "Tailwind CSS",
+      name: "Tailwind",
       icon: <SiTailwindcss className="text-sky-400" />,
       level: "Advanced",
     },
@@ -75,7 +75,7 @@ const skills = {
       level: "Advanced",
     },
     {
-      name: "Framer Motion",
+      name: "Motion",
       icon: <SiFramer className="text-blue-500" />,
       level: "Advanced",
     },
