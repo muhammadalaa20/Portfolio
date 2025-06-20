@@ -21,14 +21,14 @@ export default function Navbar() {
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out mx-auto max-w-6xl rounded-3xl
         ${
           scrolled ? "bg-black/40 backdrop-blur-lg shadow-lg" : "bg-transparent"
         }
       `}
     >
       <div
-        className={`w-full px-6 py-10 flex justify-between items-center transition-transform duration-300 ease-in-out ${
+        className={`w-full px-6 py-6 flex justify-between items-center transition-transform duration-300 ease-in-out ${
           scrolled ? "scale-95" : "scale-100"
         } max-w-7xl mx-auto`}
       >
