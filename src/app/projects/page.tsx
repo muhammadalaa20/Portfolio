@@ -125,7 +125,7 @@ export default function ProjectsPage() {
       </section>
       <div
         id="projects-section"
-        className="min-h-screen flex flex-col items-center justify-center text-center relative z-10 space-y-6 py-10 px-6"
+        className="min-h-screen flex flex-col items-center justify-center text-center relative z-10 space-y-6 py-28 px-6"
       >
         <div className="grid gap-12 max-w-5xl mx-auto">
           {projects.map((project, i) => (
