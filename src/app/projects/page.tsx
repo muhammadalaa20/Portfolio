@@ -9,7 +9,7 @@ const projects = [
         {
     title: "Device Monitoring System",
     description:
-      "A full-stack, cyber-themed web application for real-time device monitoring"
+      "A full-stack, cyber-themed web application for real-time device monitoring",
     tech: [
       "Next.js",
       "Framer Motion",
