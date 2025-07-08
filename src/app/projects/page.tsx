@@ -6,6 +6,24 @@ import Navbar from "../../components/Navbar";
 import Link from "next/link";
 
 const projects = [
+        {
+    title: "Device Monitoring System",
+    description:
+      "A full-stack, cyber-themed web application for real-time device monitoring, built with a modern tech stack and modular architecture. Designed for system administrators and IT engineers to track device status, uptime, and metrics across locations."
+    tech: [
+      "Next.js",
+      "Framer Motion",
+      "shadcn/ui",
+      "Chart.js",
+      "TypeScript",
+      "Tailwind CSS",
+          "Node.js",
+      "Express.js",
+      "SQLite",
+      "JWT",
+    ],
+    github: "https://github.com/muhammadalaa20/monitor",
+  },
     {
     title: "Chatty AI Assistant",
     description:
